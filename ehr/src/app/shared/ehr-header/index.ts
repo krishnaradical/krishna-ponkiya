@@ -1,1 +1,0 @@
-export * from './ehr-header.component';
