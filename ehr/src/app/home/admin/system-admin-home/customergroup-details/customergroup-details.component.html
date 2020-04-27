@@ -1,0 +1,35 @@
+<p>
+    {{ehrCustomerGroupResponse.name}}
+</p>
+
+<mat-tab-group (selectedTabChange)="onLinkClick($event)">
+    <mat-tab label="Overview">
+        <button mat-icon-button color="warn" (click)="back()">
+            <mat-icon class="mat-18">backspace</mat-icon>
+        </button>
+     No of facilities : {{ehrCustomerGroupResponse.eHRFacilities.length}}
+    
+    </mat-tab>
+    
+    <mat-tab label="Users">
+      
+      <user-management isCustomerGroup="{{isCustomerGroup}}"> ....</user-management>
+       </mat-tab>
+    <mat-tab label="Facilities">
+      <mat-nav-list>
+        <mat-list-item *ngFor="let ehrFacilityResponse of ehrCustomerGroupResponse.eHRFacilities">
+           <a matLine href="...">{{ ehrFacilityResponse.name }}</a>
+           <button mat-icon-button (click)="showInfo(ehrFacilityResponse)">
+              <mat-icon>info</mat-icon>
+           </button>
+        </mat-list-item>
+       
+      </mat-nav-list>
+    </mat-tab>
+    <mat-tab label="Configurations">
+      customer group level setting comes here soon ...
+      </mat-tab>
+  </mat-tab-group>
+
+ 
+

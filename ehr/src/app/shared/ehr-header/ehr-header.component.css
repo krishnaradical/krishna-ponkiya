@@ -1,0 +1,22 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  .example-button-row a {
+    margin-right: 8px;
+    color: purple
+    
+  }
+  .example-fill-header-toggle-group {
+      font-size: xx-small;
+      top: 0%;
+      bottom: 0%;
+      flex: 1 1 auto;
+  }
+  .example-card-logout{
+    top: 0%;
+      bottom: 0%;
+    height: 2%;
+    color:red;
+  }

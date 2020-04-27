@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+    <span>{{currentUser.ehrCustomerGroupResponseVO.name}}</span>
+  
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+    <mat-button-toggle-group #group="matButtonToggleGroup" 
+    name="fontStyle" aria-label="Font Style"  
+    class="example-fill-header-toggle-group" 
+     [(ngModel)]="ehrActionRoleView"
+     (change)="onValChange(ehrActionRoleView)" [value]="ehrActionRoleView" >
+        <mat-button-toggle *ngFor="let ehrActionRoleView of currentUser.ehrActionRoleViews" 
+        [value]="ehrActionRoleView" 
+       >
+            {{ehrActionRoleView.displayName}} 
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    <span class="example-fill-remaining-space"></span>
+    <mat-card-header>
+        <span><mat-card-title>Hi {{currentUser.name}} </mat-card-title>  </span>
+        <span><a mat-flat-button [routerLink]="['/login']">Logout</a> </span>
+   </mat-card-header>
+    
+  </mat-toolbar>
+  
